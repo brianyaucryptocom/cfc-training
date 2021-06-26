@@ -1,2 +1,2 @@
-# Cyber Fusion Center - Baseline Training - Lab Guide
+# Incident Response Training - Lab Guide
 

@@ -1,3 +1,3 @@
-# Cyber Fusion Center - Lab
+# Training
 
 [Home](index.md)

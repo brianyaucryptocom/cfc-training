@@ -1,4 +1,4 @@
-# CFC Training
+# Incident Response Training - Lab Guide
 
 - [CFC Training](#cfc-training)
 
