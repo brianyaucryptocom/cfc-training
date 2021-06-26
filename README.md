@@ -1,4 +1,13 @@
-MDwiki
-======
+# CFC Training
 
-See http://www.mdwiki.info/ for more documentation and details.
+- [CFC Training](#cfc-training)
+
+---
+
+This repository is made for training purpose.
+
+It is meant to be PUBLIC.
+
+<br/>
+
+---
