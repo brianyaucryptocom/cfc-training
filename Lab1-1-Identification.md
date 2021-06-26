@@ -3,6 +3,9 @@
 - [Lab 1.1 - Host identification](#lab-11---host-identification)
   - [Introduction](#introduction)
   - [1 - Identify Network Usage](#1---identify-network-usage)
+  - [2 - Identify Unusual Processes](#2---identify-unusual-processes)
+  - [3 - Unusual Services](#3---unusual-services)
+  - [4 - Unusual Registry Keys](#4---unusual-registry-keys)
 
 ---
 
@@ -92,3 +95,105 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 <br/>
 
 ---
+
+## 2 - Identify Unusual Processes
+
+**Task**
+
+Use `taskmgr.exe` to identify unusual processes.
+
+<details>
+  <summary>**Click to reveal the solution**</summary>
+
+  On a CMD prompt, run `taskmgr.exe /v`:
+
+  ![](images/lab-1-2-01-800xauto.png)
+
+  <br/>
+
+  You may exclude known good result by using piping `| findstr /V "<keyword>"`.
+
+  For example: 
+  `tasklist /v | findstr /V "svchost" | findstr /V "conhost" | findstr /V "findstr" | findstr /V "N/A"`
+
+  ![](image/../images/lab-1-2-02-800xauto.png)
+
+  <br/>
+
+  To check tasks associated with Windows Services, we run use:
+  `tasklist /svc | findstr /V "N/A"`
+
+  ![](images/lab-1-2-03-600xauto.png)  
+
+</details>
+
+<br/>
+
+---
+
+## 3 - Unusual Services
+
+**Task**
+
+- Use `sc` command to find out unusual services
+
+<details>
+  <summary>**Click to reveal the solution**</summary>
+
+  You can obtian Windows service information by running `sc` command. The following allows you to get services and pipes the output through the `more` command to display it one page at a time:
+
+  `sc query state= all | more`
+
+  ![](images/lab-1-2-04-650xauto.png)
+
+  - Note the unusual service called `ChromeUpdateService`
+  
+  <br/>
+
+  Confusing enough, you will see 2 Google Update services:
+
+  ![](images/lab-1-2-05-650xauto.png)
+
+  - https://www.webnots.com/7-ways-to-disable-automatic-chrome-update-in-windows-and-mac/
+  - They are legit services!
+
+
+</details>
+
+<br/>
+
+---
+
+## 4 - Unusual Registry Keys
+
+**Task**
+
+- Identify unusual registry keys using `reg query` or `regedit`
+
+<details>
+  <summary>**Click to reveal the solution**</summary>
+
+  Let's look into programs automatically invoked by the host when it boots up or when a user logins. We'll look at the `Run` key.
+
+  You may use the GUI tool `regedit` or the CLI tool `reg` to check the registry keys.
+
+  Use the following command to query the HKLM `Run` key:
+
+  `reg query "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run"`
+
+  ![](images/lab-1-3-01-600xauto.png)
+
+  - Look like normal?
+  - Think twice! Let's research Windows Defender 
+  - https://www.file.net/process/windows%20defender.exe.html#:~:text=The%20Windows%20Defender.exe%20file,The%20program%20is%20not%20visible.
+  - https://news.thewindowsclub.com/new-path-windows-defender-installation-windows-10-91061/
+
+  ![](images/lab-1-3-02-600xauto.png)
+
+  - The location shown in the `Run` key is abnormal! In fact, this is one of the most used trick of malwares to pretend legit program!
+  - More about Evasion on: https://attack.mitre.org/techniques/T1036/
+  - More about Persistence using RunKey on: https://attack.mitre.org/techniques/T1547/001/
+
+  <br/>
+
+</details>
