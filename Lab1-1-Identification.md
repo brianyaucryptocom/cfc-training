@@ -2,6 +2,7 @@
 
 - [Lab 1.1 - Host identification](#lab-11---host-identification)
   - [Introduction](#introduction)
+  - [Inspect listening port](#inspect-listening-port)
 
 ---
 
@@ -12,3 +13,6 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 <br/>
 
 ---
+
+## Inspect listening port
+
