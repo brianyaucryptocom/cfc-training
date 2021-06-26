@@ -2,7 +2,7 @@
 
 - [Lab 1.1 - Host identification](#lab-11---host-identification)
   - [Introduction](#introduction)
-  - [Windows commands](#windows-commands)
+  - [Identify Network Usage](#identify-network-usage)
 
 ---
 
@@ -14,9 +14,14 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 
 ---
 
-## Windows commands
+## Identify Network Usage
 
-**Task: Check Network Usage using netstat**
+**Task**
+
+- Use `netstat` to check the network usage of the host.
+- Find out any unusual network usage
+
+<br/>
 
 <details>
   <summary>**Click to reveal the solution**</summary>
@@ -30,10 +35,8 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 
   Next, create a netcat listener on the host. Use the command prompt and enter the following commands:
 
-  ```
-  ubuntu2004
-  nc -lp 10000
-  ```
+  - `ubuntu2004`
+  - `nc -lp 10000`
 
   ![02](images/lab-1-1-02.png)
 
@@ -51,7 +54,22 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 
   ![04](images/lab-1-1-04.png)
 
+  <br/>
 
+  You can also run `netstat -nao 5` to make it refreshes every 5 seconds.
+
+  <br/>
+
+  Next, run `netstat -naob` to see the EXE and DLLs associated with each listening port.
+
+  ![05](images/lab-1-1-05.png)
+
+  <br/>
+
+  You may close all of the command prompts after this.
 
 </details>
 
+<br/>
+
+---
