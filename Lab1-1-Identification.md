@@ -24,7 +24,7 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 
   As a baseline, first run `cmd.exe` as admin, and then run `netstat -na`:
 
-  ![01](images/lab-1-1-01.png =30%x)
+  ![01](images/lab-1-1-01.png)
 
   <br/>
 
@@ -35,7 +35,7 @@ In this lab, you are going to investigate a Windows host, which is reported to b
   nc -lp 10000
   ```
 
-  ![02](images/lab-1-1-02.png =30%x)
+  ![02](images/lab-1-1-02.png)
 
   This command will run in a Ubuntu container and create a TCP listener on tcp/10000.
 
@@ -43,13 +43,13 @@ In this lab, you are going to investigate a Windows host, which is reported to b
 
   Then again, run `netstat -na`:
 
-  ![03](images/lab-1-1-03.png =30%x)
+  ![03](images/lab-1-1-03.png)
 
   <br/>
 
   We can also check the process ID for the executables using the TCP/UDP ports using `netstat -ano`:
 
-  ![04](images/lab-1-1-04.png =30%x)
+  ![04](images/lab-1-1-04.png)
 
 
 
