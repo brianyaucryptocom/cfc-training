@@ -51,7 +51,7 @@ Now you are tasked to perform the containment process.
 
   <br/>
 
-  Note that you shouldn't do it when during the containment! This may cause further damager to the infected host.
+  Note that you shouldn't do it when during the containment! This may cause further damage to the infected host.
 
 </details>
 
