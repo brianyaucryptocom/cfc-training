@@ -9,6 +9,7 @@
   - [Artifact 2: Bind Shell service](#artifact-2-bind-shell-service)
     - [Kali Linux](#kali-linux-1)
     - [Windows](#windows-1)
+  - [C2](#c2)
 
 ---
 
@@ -124,3 +125,11 @@ sc create ChromeUpdateService binpath= "cmd.exe /k C:\ProgramData\Chrome\ChromeU
 <br/>
 
 ---
+
+## C2
+
+Kali:
+
+```
+sessions -c "msg administrator hello"
+```
