@@ -9,6 +9,7 @@
 ## Windows Command Prompt
 
 ![](./images/Cheatsheet_SEC301-401_R7-1.jpg)
+
 ![](./images/Cheatsheet_SEC301-401_R7-2.jpg)
 
 <br/>
