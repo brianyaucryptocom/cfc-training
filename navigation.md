@@ -10,3 +10,5 @@
   * [Lab 2: Containment](Lab1-2-Containment.md)
   * [Lab 3: Exercise](Lab1-3-Exercise.md)
 - - - -
+
+[Cheatsheet](Cheatsheet.md)
