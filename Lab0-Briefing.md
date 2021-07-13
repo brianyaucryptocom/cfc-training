@@ -2,7 +2,7 @@
 
 - [Lab 0 - Briefing](#lab-0---briefing)
   - [Introduction](#introduction)
-  - [Lab guide](#lab-guide)
+  - [Lab guide update](#lab-guide-update)
 
 ---
 
@@ -25,5 +25,10 @@ It is designed to be vulnerable and in an insecure state!
 
 ---
 
-## Lab guide
+## Lab guide update
 
+On the Desktop, double click `LabGuideUpdate.bat` and you will have your lab guide updated!
+
+<br/>
+
+---

